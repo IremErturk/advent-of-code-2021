@@ -9,9 +9,13 @@ def count_depth_measurement_increases(input_file_path="../inputs/01-01-12.txt", 
         i = 0
         while(i <= len(lines)-window_size): # sliding window boundry
             window_start = i
-            window_sum = 0
-            for w in range(window_size):
-                window_sum += lines[window_start + w]
+            window_end = i + window_size - 1
+            if window_start: # window_start !=0
+                window_sum = window_sum - lines[window_start-1] + lines[window_end]
+            else:
+                window_sum = 0
+                for w in range(window_size):
+                    window_sum += lines[window_start + w]
             if window_sum > prev: count +=1
             prev = window_sum
             i +=1
