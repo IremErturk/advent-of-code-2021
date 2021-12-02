@@ -9,6 +9,13 @@ Advent of Code 2021
 [Day 1] [Sonar Sweep](puzzles/01-01-12.md) \
 [Day 2] [Dive](puzzles/02-02-12.md)
 
-## How to
-Activate the poetry environment `source $(poetry env info --path)/bin/activate`
+## How To 
+
+In this repository **Poetry** is used for dependency management
+To activate poetry environment, please run following command  
+```script 
+source $(poetry env info --path)/bin/activate
+```
+
+To retrive the AOC stats, the Github actions used, please check how to use [aoc-badges-action](https://github.com/J0B10/aoc-badges-action) for details
 
